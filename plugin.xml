@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+           id="cordova-plugin-opensignal-sdk"
+      version="1.3.3">
+    <name>OpenSignalSDK</name>
+    <description>OpenSignalSDK Plugin</description>
+    <license></license>
+    <keywords>OpenSignalSDK</keywords>
+
+    <engines>
+      <engine name="cordova-android" version=">=4.0.0" />
+    </engines>
+
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="OpenSignalSDKPlugin">
+                <param name="android-package" value="opensignal.OpenSignalSDKPlugin" />
+                <param name="onload" value="true"/>
+            </feature>
+        </config-file>
+
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+            <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+            <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        </config-file>
+
+        <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
+        <framework src="com.google.android.gms:play-services-location:+" />
+        <framework src="com.squareup.okhttp3:okhttp:+" />
+        <framework src="com.fasterxml.jackson.core:jackson-core:+" />
+
+        <resource-file src="OpenSignalNdcSDK-GIIN-release.aar" target="libs/OpenSignalNdcSDK-GIIN-release.aar" />
+        <source-file src="src/android/OpenSignalSDKPlugin.java" target-dir="src/opensignal" />
+
+        <info>
+            OpenSignalSDK cordova plugin
+        </info>
+    </platform>
+
+</plugin>

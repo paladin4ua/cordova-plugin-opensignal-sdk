@@ -1,0 +1,38 @@
+{
+  "author": {
+    "name": "Volodymyr Kubiv"
+  },
+  "bugs": {
+    "url": ""
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "platforms": [
+      "android"
+    ]
+  },
+  "deprecated": false,
+  "description": "OpenSignalSDK Plugin",
+  "engines": {
+    "cordovaDependencies": {
+      "0.0.0": {
+        "cordova-android": ">=4.0.0"
+      },
+      "2.0.0": {
+        "cordova": ">100"
+      }
+    }
+  },
+  "homepage": "",
+  "keywords": [
+    "cordova",
+    "cordova-android"
+  ],
+  "license": "",
+  "name": "cordova-plugin-opensignal-sdk",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apache/cordova-plugin-whitelist.git"
+  },
+  "version": "1.0.0"
+}
